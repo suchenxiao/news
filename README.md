@@ -1,0 +1,2 @@
+# news
+wx mini programe

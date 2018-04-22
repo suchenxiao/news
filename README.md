@@ -1,2 +1,2 @@
-# news
-wx mini programe
+# 新闻小程序
+微信小程序-新闻项目

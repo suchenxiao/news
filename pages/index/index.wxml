@@ -1,15 +1,15 @@
 <!--index.wxml-->
 <view class="nav-list">
-  <text class="nav-item" style="{{navOn}}" wx:for="{{['国内', '国际', '财经', '娱乐', '军事', '体育', '其他']}}">{{item}}</text>
+  <text class="nav-item" style="{{navOn}}" wx:for="{{newsTypes}}">{{item.name}}</text>
 </view>
 <view class="news-list">
-  <view class="news-item" wx:for="{{[1,2,3]}}">
-    <image class="pic" src="/images/p1.jpg"></image>
+  <view class="news-item" wx:for="{{newsList}}">
+    <image class="pic" src="{{item.imgUrl}}"></image>
     <view class="text">
-      <text class="title">BALABALABALABALABALBALABA...</text>
+      <text class="title">{{item.title}}</text>
       <view class="more">  
-        <text class="source">XX新闻</text>
-        <text class="time">10:22</text>
+        <text class="source">{{item.source}}</text>
+        <text class="time">{{item.time}}</text>
       </view>
     </view>  
   </view>

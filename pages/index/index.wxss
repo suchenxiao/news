@@ -1,1 +1,88 @@
 /**index.wxss**/
+
+/**页头导航栏**/
+.nav-list{
+  background: #66f;
+  color: #fff;
+  display: flex;
+}
+.nav-item{
+  display: flex;
+  flex-direction: column;
+  flex-grow:1;
+  width: 100rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+/**新闻列表**/
+.news-list{
+  
+}
+.news-item{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 200rpx;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0 30rpx;
+}
+.pic{
+  width: 200rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+}
+.text{
+  width: 460rpx;
+  margin-right: 50rpx;
+}
+.title{
+  font-size: 35rpx;
+  line-height: 40rpx;
+  height: 80rpx; 
+  color: #333;
+  word-break: break-all;
+}
+.more{
+  font-size: 25rpx;
+  line-height: 35rpx;
+  color: #999;
+  display: flex;
+  margin-top: 10rpx;
+}
+.source{
+  padding-right: 20rpx;
+}
+.time{
+  
+}
+
+.news-item:first-child{
+  display: block;
+  position: relative;
+  height: auto;
+  border-top: 0;
+  padding: 30rpx;
+  margin: 0;
+}
+.news-item:first-child .pic{
+  display: block;
+  width: 690rpx;
+  height: 360rpx;
+}
+.news-item:first-child .text{
+  display: block;
+  width: 650rpx;
+  text-shadow: 3rpx 3rpx 3rpx rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 50rpx;
+  bottom: 50rpx;
+}
+
+.news-item:first-child .text .title{
+  color: rgba(255, 255, 255, 0.9);
+}
+.news-item:first-child .text .more{
+  color: rgba(255, 255, 255, 0.6);
+}

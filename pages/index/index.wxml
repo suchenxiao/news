@@ -1,4 +1,16 @@
 <!--index.wxml-->
-<view class="container">
-
+<view class="nav-list">
+  <text class="nav-item" style="{{navOn}}" wx:for="{{['国内', '国际', '财经', '娱乐', '军事', '体育', '其他']}}">{{item}}</text>
+</view>
+<view class="news-list">
+  <view class="news-item" wx:for="{{[1,2,3]}}">
+    <image class="pic" src="/images/p1.jpg"></image>
+    <view class="text">
+      <text class="title">BALABALABALABALABALBALABA...</text>
+      <view class="more">  
+        <text class="source">XX新闻</text>
+        <text class="time">10:22</text>
+      </view>
+    </view>  
+  </view>
 </view>

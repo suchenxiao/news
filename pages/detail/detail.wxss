@@ -1,0 +1,40 @@
+/* pages/detail/detail.wxss */
+/* 页头部分 */
+.header{
+  padding: 30rpx;
+}
+.title{
+  font-size: 45rpx;
+  line-height: 50rpx;
+  padding-bottom: 20rpx;
+  display: block;
+}
+.more{
+  font-size: 25rpx;
+  line-height: 35rpx;
+  height: 35rpx;
+  color: rgba(0, 0, 0, 0.4);
+}
+.source{
+  padding-right: 30rpx;
+}
+.time{
+}
+.read-count{
+  float: right;
+}
+
+/* 文章部分 */
+.article{
+  padding: 0 30rpx;
+}
+.article-pic{
+  width: 690rpx;
+}
+.article-txt{
+ display: block;
+ font-size: 35rpx;
+ line-height: 50rpx;
+ text-align: justify;
+ padding-bottom: 20rpx;
+ }

@@ -38,3 +38,12 @@
  text-align: justify;
  padding-bottom: 20rpx;
  }
+ .sub-title{
+   display: block;
+   text-align: center;
+   font-weight: bold;
+   margin-top: 20rpx;
+ }
+ .sub-pic{
+   width: 690rpx;
+ }

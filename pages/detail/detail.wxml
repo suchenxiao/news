@@ -2,7 +2,7 @@
 <view class="header">
   <text class="title">{{newsDetail.title}}</text>
   <view class="more">
-    <text class="source">{{newsDetail.source}}</text>
+    <text wx:if="{{item.source !=  null }}" class="source">{{newsDetail.source}}</text>
     <text class="time">{{newsDetail.time}}</text>
     <text class="read-count">阅读 {{newsDetail.readCount}}</text>
   </view>
@@ -11,5 +11,7 @@
   <image class="article-pic" src="{{newsDetail.imgUrl}}"></image>
   <view class="article-txt" wx:for="{{newsDetail.content}}">
     <text wx:if="{{item.type === 'p'}}">{{item.text}}</text>
+    <text wx:if="{{item.type === 'strong'}}" class="sub-title">{{item.text}}</text>
+    <image wx:if="{{item.type === 'image'}}" class="sub-pic" src='{{item.src}}'></image>
   </view>
 </view>

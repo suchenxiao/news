@@ -8,7 +8,7 @@
     <view class="text">
       <text class="title">{{item.title}}</text>
       <view class="more">  
-        <text class="source">{{item.source}}</text>
+        <text wx:if="{{item.source != ''}}" class="source">{{item.source}}</text>
         <text class="time">{{item.time}}</text>
       </view>
     </view>  

@@ -27,5 +27,41 @@ Page({
         imgUrl: 'http://img1.gtimg.com/finance/pics/hv1/33/207/1023/66573393.jpg'
       }
     ]
+  },
+  onLoad: function() {
+    this.getNews();
+  },
+
+  getNews: function (callback) {
+    wx.request({
+      url: 'https://test-miniprogram.com/api/news/list',
+      data: {
+        type: 'gn'
+      },
+      success: res => {
+        let result = res.data.result;
+        this.setNews(result);
+      },
+      complete: () => {
+        callback && callback();
+      }
+    });
+  },
+  setNews: function(res) {
+    let newsList = [];
+    for( let i =0; i < res.length; i++) {
+      newsList.push({
+      id : res[i].id,
+      // 标题最多25个字， 超出部分用 ···代替
+      title: (res[i].title.length < 25) ? res[i].title : res[i].title.substring(0, 24) + ' ···',
+      source : res[i].source,
+      // 先通过截取字符串位置方法取时间
+      // TODO:处理XSD时间格式
+      time: res[i].date.substring(11, 16), 
+      imgUrl : res[i].firstImage
+      });
+    }
+    console.log(newsList);
+    this.setData({newsList : newsList});
   }
 })

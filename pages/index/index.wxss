@@ -74,10 +74,13 @@
 .news-item:first-child .text{
   display: block;
   width: 650rpx;
-  text-shadow: 3rpx 3rpx 3rpx rgba(0, 0, 0, 0.5);
   position: absolute;
-  left: 50rpx;
-  bottom: 50rpx;
+  left: 30rpx;
+  bottom: 30rpx;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20rpx;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
 }
 
 .news-item:first-child .text .title{

@@ -3,7 +3,7 @@
   <text class="nav-item" style="{{navOn}}" wx:for="{{newsTypes}}">{{item.name}}</text>
 </view>
 <view class="news-list">
-  <view class="news-item" wx:for="{{newsList}}">
+  <view class="news-item" wx:for="{{newsList}}" bindtap='onTapNews' data-id="{{item.id}}">
     <image class="pic" src="{{item.imgUrl}}"></image>
     <view class="text">
       <text class="title">{{item.title}}</text>

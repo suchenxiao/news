@@ -1,7 +1,9 @@
 /* pages/detail/detail.wxss */
 /* 页头部分 */
 .header{
-  padding: 30rpx;
+  margin: 30rpx;
+  padding-bottom: 10rpx;
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.1);
 }
 .title{
   font-size: 45rpx;

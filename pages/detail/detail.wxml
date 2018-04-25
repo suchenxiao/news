@@ -8,7 +8,9 @@
   </view>
 </view>
 <view class="article">
+  <!--
   <image class="article-pic" src="{{newsDetail.imgUrl}}"></image>
+  -->
   <view class="article-txt" wx:for="{{newsDetail.content}}">
     <text wx:if="{{item.type === 'p'}}">{{item.text}}</text>
     <text wx:if="{{item.type === 'strong'}}" class="sub-title">{{item.text}}</text>

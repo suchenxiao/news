@@ -21,8 +21,10 @@ Page({
         ]
       }
   },
-
-  onLoad: function () {
+  onLoad: function (options) {
+    this.setData({
+      id: options.id
+    });
     this.getNews();
   },
 
@@ -30,12 +32,12 @@ Page({
     wx.request({
       url: 'https://test-miniprogram.com/api/news/detail',
       data: {
-        id: 1523074607667
+        id: this.data.id
       },
       success: res => {
         let result = res.data.result;
         if (res.data.code === 200) {
-          console.log(res);  
+          //console.log(res);  
           this.setNews(result);
         }
       },
@@ -56,7 +58,7 @@ Page({
         readCount: res.readCount,
         content : res.content
     };
-    console.log(newsDetail);
+    //console.log(newsDetail);
     this.setData({ newsDetail: newsDetail });
   }
 })

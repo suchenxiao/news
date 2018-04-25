@@ -63,5 +63,11 @@ Page({
     }
     console.log(newsList);
     this.setData({newsList : newsList});
-  }
+  },
+  onTapNews: function(e) {
+    //console.log(e.currentTarget.dataset.id)
+    wx.navigateTo({
+      url: '/pages/detail/detail?id=' + e.currentTarget.dataset.id,
+    })
+  },
 })

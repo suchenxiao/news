@@ -23,7 +23,11 @@ Page({
     });
     this.getNews();
   },
-
+  onPullDownRefresh() {
+    this.getNews(() => {
+      wx.stopPullDownRefresh();
+    });
+  },
   getNews: function (callback) {
     wx.request({
       url: 'https://test-miniprogram.com/api/news/detail',

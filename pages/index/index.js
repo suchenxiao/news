@@ -25,7 +25,11 @@ Page({
     this.setNewsType(this.data.newsTypes[0].code);
     this.getNews();
   },
-
+  onPullDownRefresh() {
+    this.getNews(() => {
+      wx.stopPullDownRefresh();
+    });
+  },
   getNews: function (callback) {
     wx.request({
       url: 'https://test-miniprogram.com/api/news/list',

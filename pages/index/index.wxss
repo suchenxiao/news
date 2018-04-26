@@ -15,6 +15,9 @@
   line-height: 80rpx;
   text-align: center;
 }
+.nav-on{
+  border-bottom: 1rpx solid #fff;
+}
 
 /**新闻列表**/
 .news-list{

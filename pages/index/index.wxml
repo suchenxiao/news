@@ -1,9 +1,9 @@
 <!--index.wxml-->
 <view class="nav-list">
-  <text class="nav-item" style="{{navOn}}" wx:for="{{newsTypes}}">{{item.name}}</text>
+  <text class="nav-item {{(item.code == newsType) ? 'nav-on' : ''}}" wx:for="{{newsTypes}}" bindtap='onTapNewsType' data-type="{{item.code}}">{{item.name}}</text>
 </view>
 <view class="news-list">
-  <view class="news-item" wx:for="{{newsList}}" bindtap='onTapNews' data-id="{{item.id}}">
+  <view class="news-item" wx:for="{{newsList}}" bindtap='onTapNewsItem' data-id="{{item.id}}">
     <image class="pic" src="{{item.imgUrl}}"></image>
     <view class="text">
       <text class="title">{{item.title}}</text>

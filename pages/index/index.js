@@ -52,7 +52,8 @@ Page({
       // 先通过截取字符串位置方法取时间
       // TODO:处理XSD时间格式
       time: res[i].date.substring(11, 16), 
-      imgUrl : res[i].firstImage
+      // 若没有返回图片地址则使用默认图片替代
+      imgUrl : (res[i].firstImage || '/images/default.jpg') 
       });
     }
     this.setData({newsList : newsList});

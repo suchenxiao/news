@@ -1,5 +1,11 @@
 /* pages/detail/detail.wxss */
 /* 页头部分 */
+.top-line{
+  border-bottom: 1rpx solid #66f;
+  position: fixed;
+  top: 0;
+  width: 750rpx;
+}
 .header{
   margin: 30rpx;
   padding-bottom: 10rpx;
@@ -29,6 +35,7 @@
 /* 文章部分 */
 .article{
   padding: 0 30rpx;
+  text-align: center;
 }
 .article-pic{
   width: 690rpx;
@@ -44,7 +51,6 @@
    display: block;
    text-align: center;
    font-weight: bold;
-   margin-top: 20rpx;
  }
  .sub-pic{
    width: 690rpx;

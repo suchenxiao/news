@@ -5,6 +5,10 @@
   background: #66f;
   color: #fff;
   display: flex;
+  position: fixed;
+  width: 750rpx;
+  top: 0;
+  z-index: 8;
 }
 .nav-item{
   display: flex;
@@ -15,12 +19,22 @@
   line-height: 80rpx;
   text-align: center;
 }
+/* 因为无法通过本地图片设置背景 单独用个视图实现小白块 */
 .nav-on{
-  border-bottom: 1rpx solid #fff;
 }
-
+.white-block{
+  display: block;
+  width: 30rpx;
+  height: 4rpx;
+  background: rgba(255,255,255,0.6);
+  position: fixed;
+  top: 65rpx;
+  margin: 0 38rpx;
+  z-index: 9;
+}
 /**新闻列表**/
 .news-list{
+  margin-top: 80rpx;
   
 }
 .news-item{
@@ -61,7 +75,7 @@
   
 }
 
-.news-item:first-child{
+.news-first{
   display: block;
   position: relative;
   height: auto;
@@ -69,12 +83,12 @@
   padding: 30rpx;
   margin: 0;
 }
-.news-item:first-child .pic{
+.news-first .pic{
   display: block;
   width: 690rpx;
   height: 360rpx;
 }
-.news-item:first-child .text{
+.news-first .text{
   display: block;
   width: 650rpx;
   position: absolute;
@@ -86,9 +100,9 @@
   border-bottom-right-radius: 10rpx;
 }
 
-.news-item:first-child .text .title{
+.news-first .text .title{
   color: rgba(255, 255, 255, 0.9);
 }
-.news-item:first-child .text .more{
+.news-first .text .more{
   color: rgba(255, 255, 255, 0.6);
 }

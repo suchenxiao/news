@@ -11,6 +11,7 @@ Page({
       { name: '其他', code: 'other'}
     ],
     newsType: '',
+    navOnLeft: '',
     newsList:[
       { 
         id: '',
@@ -24,6 +25,12 @@ Page({
   onLoad: function() {
     this.setNewsType(this.data.newsTypes[0].code);
     this.getNews();
+  },
+  onShow: function () {
+    wx.setNavigationBarColor({
+      frontColor: '#ffffff',
+      backgroundColor: '#66f'
+    });
   },
   onPullDownRefresh() {
     this.getNews(() => {
@@ -64,7 +71,9 @@ Page({
   },
   setNewsType(type, index){
     this.setData({
-      newsType: type
+      newsType: type,
+      // 计算小白块左侧边距
+      navOnLeft: (index*750/7) + 'rpx'
     });
   },
   onTapNewsItem: function(e) {
@@ -73,8 +82,8 @@ Page({
     })
   },
   onTapNewsType: function (e) {
-    console.log(e);
-    this.setNewsType(e.currentTarget.dataset.type);
+    //console.log(e);
+    this.setNewsType(e.currentTarget.dataset.type, e.currentTarget.dataset.index);
     this.getNews();
   }
 })

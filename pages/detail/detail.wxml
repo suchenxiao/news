@@ -1,4 +1,5 @@
 <!--pages/detail/detail.wxml-->
+<view class="top-line"></view>
 <view class="header">
   <text class="title">{{newsDetail.title}}</text>
   <view class="more">
@@ -14,6 +15,6 @@
   <view class="article-txt" wx:for="{{newsDetail.content}}">
     <text wx:if="{{item.type === 'p'}}">{{item.text}}</text>
     <text wx:if="{{item.type === 'strong'}}" class="sub-title">{{item.text}}</text>
-    <image wx:if="{{item.type === 'image'}}" class="sub-pic" src='{{item.src}}'></image>
+    <image wx:if="{{item.type === 'image'}}" class="sub-pic" src="{{item.src}}" mode="aspectFit"></image>
   </view>
 </view>

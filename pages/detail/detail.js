@@ -22,8 +22,14 @@ Page({
       id: options.id
     });
     this.getNews();
+  }, 
+  onShow: function() {
+    wx.setNavigationBarColor({
+      frontColor: '#000000',
+      backgroundColor: '#ffffff'
+    });
   },
-  onPullDownRefresh() {
+  onPullDownRefresh: function() {
     this.getNews(() => {
       wx.stopPullDownRefresh();
     });
